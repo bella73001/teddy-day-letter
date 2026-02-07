@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy teddy Day 🧸</title>
+<style>
+*{box-sizing:border-box;font-family:'Georgia',serif}
+body{
+margin:0;
+height:100vh;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+/* HEART BACKGROUND */
+.heart-bg{
+position:absolute;
+width:100%;
+height:100%;
+top:0;left:0;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:180px;
+opacity:0.15;
+animation:beat 1.2s infinite;
+}
+@keyframes beat{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.1)}
+}
+
+/* LOCK SCREEN */
+.lock{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+text-align:center;
+z-index:2;
+}
+.lock h2{color:#d6336c}
+.lock input{
+padding:10px;
+width:220px;
+border-radius:10px;
+border:1px solid #ccc;
+margin-top:10px;
+}
+.lock button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#ff4d6d;
+color:#fff;
+font-size:16px;
+cursor:pointer;
+}
+
+/* READY TEXT */
+.ready{
+display:none;
+font-size:28px;
+color:#fff;
+z-index:2;
+}
+
+/* LETTER */
+.letter{
+display:none;
+background:#fff;
+padding:35px 30px;
+width:380px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 35px 35px rgba(0,0,0,.3);
+z-index:2;
+animation:fadeIn 1s ease;
+}
+@keyframes fadeIn{
+from{opacity:0;transform:scale(.9)}
+to{opacity:1;transform:scale(1)}
+}
+.ring{
+font-size:45px;
+margin-bottom:10px;
+}
+.letter h1{
+color:#8b5cf6;
+margin-bottom:15px;
+}
+.letter p{
+font-size:16px;
+line-height:1.6;
+color:#333;
+}
+
+/* BUTTONS */
+.buttons{
+margin-top:20px;
+}
+.buttons button{
+padding:10px 25px;
+margin:5px;
+border:none;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+}
+.yes{background:#22c55e;color:#fff}
+.no{background:#ef4444;color:#fff}
+
+/* FIREWORKS */
+.fireworks{
+display:none;
+position:absolute;
+inset:0;
+background:#000;
+color:#fff;
+font-size:50px;
+justify-content:center;
+align-items:center;
+animation:fadeIn 1s;
+z-index:5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart-bg">🧸</div>
+
+<!-- LOCK -->
+<div class="lock" id="lock">
+<h2>🔒 Enter Password</h2>
+<input type="password" id="pass" placeholder="password">
+<br>
+<button onclick="check()">Unlock 🧸</button>
+</div>
+
+<!-- READY -->
+<div class="ready" id="ready">Are you ready…? 💖</div>
+
+<!-- LETTER -->
+<div class="letter" id="letter">
+<div class="teddy">🧸</div>
+<h1>Happy teddy Day, my pupchiii 💕</h1>
+
+<p>
+By the way, I know I’m already your teddy…
+and honestly, no one can ever fill my place or make up for my absence.
+But until the day we can finally stay together, I’m sending you this little cutie.
+
+Think of her as your tiny vertiku—someone you can hold close when you miss me,
+someone you can hug on the days when my arms aren’t there yet.
+Let her remind you of my warmth, my care, and how much I love you.
+
+But just so you know… she can never replace me 🤍
+Because no teddy can love you the way I do,
+no hug can feel the same as mine,
+and no comfort can match what we share.
+
+So keep her close, smile when you hug her,
+and remember that every hug is just a promise of the real ones waiting for us.
+
+Happy Teddy Day, my love 🧸💞
+I’m always with you, even when I’m not right there.
+</p>
+
+<h2 style="color:#2563eb;margin-top:20px;">YOU LIKE IT…?</h2>
+
+<div class="buttons">
+<button class="yes" onclick="yes()">YES 💖</button>
+<button class="no">NO 💔</button>
+</div>
+</div>
+
+<!-- FIREWORKS -->
+<div class="fireworks" id="fireworks">
+🎆🎇 NOW UH HAVE VERTKUU 💖🎇🎆
+</div>
+
+<script>
+function check(){
+const p=document.getElementById('pass').value;
+if(p==="23.01.2026
+document.getElementById('lock').style.display="none";
+setTimeout(()=>{
+document.getElementById('ready').style.display="block";
+},500);
+setTimeout(()=>{
+document.getElementById('ready').style.display="none";
+document.getElementById('letter').style.display="block";
+},2500);
+}else{
+alert("Wrong password 💔");
+}
+}
+function yes(){
+document.getElementById('fireworks').style.display="flex";
+}
+</script>
+
+</body>
+</html>
